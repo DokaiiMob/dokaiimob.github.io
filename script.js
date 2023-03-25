@@ -1,18 +1,17 @@
-const navLinks = document.querySelectorAll('nav ul li a');
-    const sections = document.querySelectorAll('main, section');
+// получаем ссылки на вкладки и секции
+const tabs = document.querySelectorAll('.tab');
+const sections = document.querySelectorAll('section');
 
-    navLinks.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
+// обрабатываем клик по вкладке
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // удаляем класс 'active' у всех вкладок и секций
+    tabs.forEach(tab => tab.classList.remove('active'));
+    sections.forEach(section => section.classList.remove('active'));
 
-        // Удаляем класс "active" со всех вкладок и секций
-        navLinks.forEach(link => link.classList.remove('active'));
-        sections.forEach(section => section.classList.remove('active'));
-
-        // Добавляем класс "active" к выбранной вкладке и секции
-        const targetId = link.dataset.target;
-        const targetSection = document.getElementById(targetId);
-        link.classList.add('active');
-        targetSection.classList.add('active');
-      });
-    });
+    // добавляем класс 'active' для текущей вкладки и соответствующей секции
+    tab.classList.add('active');
+    const targetSection = document.querySelector(tab.dataset.target);
+    targetSection.classList.add('active');
+  });
+});
