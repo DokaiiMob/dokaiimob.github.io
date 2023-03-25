@@ -1,56 +1,63 @@
-/* убираем отступы для всей страницы */
-body {
-  margin: 0;
-  padding: 0;
+.footer {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  padding: 50px 0;
 }
 
-/* стилизуем заголовки */
-h1, h2 {
-  font-size: 2rem;
-  font-weight: bold;
+.footer h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
-/* стилизуем вкладки */
-.tab {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  border-bottom: none;
+.footer p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.tab.active {
-  background-color: #fff;
-  border-color: #fff;
-}
-
-/* стилизуем секции */
-section {
-  display: none;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-}
-
-section.active {
-  display: block;
-}
-
-/* стилизуем ссылки на социальные сети */
-.social-link {
-  display: inline-block;
+.footer a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
   margin-right: 10px;
-  font-size: 1.5rem;
-  color: #666;
-  transition: color 0.2s;
+  transition: color 0.3s ease-in-out;
 }
 
-.social-link:hover {
+.footer a:hover {
+  color: #00ff00;
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.footer .social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #00ff00;
+  margin-right: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.footer .social-icons a:hover {
+  background-color: #ff00ff;
+}
+
+.footer .social-icons i {
+  font-size: 30px;
   color: #000;
-}
-
-/* стилизуем иконки социальных сетей */
-.social-link i {
-  margin-right: 5px;
 }
