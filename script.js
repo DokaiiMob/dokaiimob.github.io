@@ -1,27 +1,29 @@
-// получаем все элементы вкладок и контенты
-const tabs = document.querySelectorAll('.tab');
-const contents = document.querySelectorAll('.tab-content');
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
 
-// скрываем все контенты, кроме первого
-contents.forEach(content => {
-  if (!content.classList.contains('active')) {
-    content.style.display = 'none';
-  }
-});
+function changeTab(event) {
+  // Предотвращаем переход по ссылке
+  event.preventDefault();
 
-// добавляем обработчики событий на клик по вкладкам
-tabs.forEach((tab, index) => {
-  tab.addEventListener('click', () => {
-    // удаляем класс "active" у всех вкладок и контентов
-    tabs.forEach(tab => tab.classList.remove('active'));
-    contents.forEach(content => {
-      content.classList.remove('active');
-      content.style.display = 'none';
-    });
-
-    // добавляем класс "active" только выбранной вкладке и соответствующему контенту
-    tab.classList.add('active');
-    contents[index].classList.add('active');
-    contents[index].style.display = 'block';
+  // Скрытие всех вкладок
+  tabContents.forEach(tabContent => {
+    tabContent.style.display = 'none';
   });
+
+  // Удаление класса active у всех кнопок
+  tabButtons.forEach(tabButton => {
+    tabButton.classList.remove('active');
+  });
+
+  // Отображение нужной вкладки
+  const tabSelected = this.getAttribute('data-tab');
+  document.querySelector(`#${tabSelected}`).style.display = 'flex';
+
+  // Добавление класса active текущей кнопке
+  this.classList.add('active');
+}
+
+// Привязка функции changeTab к клику на каждую кнопку
+tabButtons.forEach(tabButton => {
+  tabButton.addEventListener('click', changeTab);
 });
