@@ -1,11 +1,11 @@
-/* Стили для шапки */
+/* Г‘ГІГЁГ«ГЁ Г¤Г«Гї ГёГ ГЇГЄГЁ */
 header {
   background: linear-gradient(90deg, #2c2c2c, #9b1d9b, #d82b8f);
   color: #fff;
   padding: 10px;
 }
 
-/* Стили для навигации */
+/* Г‘ГІГЁГ«ГЁ Г¤Г«Гї Г­Г ГўГЁГЈГ Г¶ГЁГЁ */
 nav ul {
   list-style: none;
   margin: 0;
@@ -51,13 +51,13 @@ nav a:hover:before {
   opacity: 0.2;
 }
 
-/* Стили для основного содержимого */
+/* Г‘ГІГЁГ«ГЁ Г¤Г«Гї Г®Г±Г­Г®ГўГ­Г®ГЈГ® Г±Г®Г¤ГҐГ°Г¦ГЁГ¬Г®ГЈГ® */
 main {
   background-color: #f7f7f7;
   padding: 20px;
 }
 
-/* Стили для заголовка */
+/* Г‘ГІГЁГ«ГЁ Г¤Г«Гї Г§Г ГЈГ®Г«Г®ГўГЄГ  */
 h1 {
   font-size: 3em;
   text-align: center;
@@ -77,7 +77,7 @@ h1:before {
   animation: animateLine 2s linear infinite;
 }
 
-/* Анимация для заголовка */
+/* ГЂГ­ГЁГ¬Г Г¶ГЁГї Г¤Г«Гї Г§Г ГЈГ®Г«Г®ГўГЄГ  */
 @keyframes animateLine {
   0% {
     width: 0;
@@ -90,13 +90,13 @@ h1:before {
   }
 }
 
-/* Стили для текста */
+/* Г‘ГІГЁГ«ГЁ Г¤Г«Гї ГІГҐГЄГ±ГІГ  */
 p {
   font-size: 1.2em;
   animation: fadeIn 2s ease-out;
 }
 
-/* Анимация для текста */
+/* ГЂГ­ГЁГ¬Г Г¶ГЁГї Г¤Г«Гї ГІГҐГЄГ±ГІГ  */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -108,7 +108,7 @@ p {
   }
 }
 
-/* Стили для подвала */
+/* Г‘ГІГЁГ«ГЁ Г¤Г«Гї ГЇГ®Г¤ГўГ Г«Г  */
 footer {
   background: linear-gradient(90deg, #2c2c2c, #9b1d9b, #d82b8f);
   color: #fff;
@@ -116,83 +116,54 @@ footer {
   text-align: center;
 }
 
+/* СѓР±РёСЂР°РµРј РѕС‚СЃС‚СѓРїС‹ РґР»СЏ РІСЃРµР№ СЃС‚СЂР°РЅРёС†С‹ */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
+/* СЃС‚РёР»РёР·СѓРµРј Р·Р°РіРѕР»РѕРІРєРё */
+h1, h2 {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
+/* СЃС‚РёР»РёР·СѓРµРј РІРєР»Р°РґРєРё */
+.tab {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-bottom: none;
 }
 
-nav ul li {
-  margin-right: 1rem;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-}
-
-nav ul li a.active {
+.tab.active {
   background-color: #fff;
-  color: #333;
+  border-color: #fff;
 }
 
-main {
-  padding: 2rem;
-}
-
+/* СЃС‚РёР»РёР·СѓРµРј СЃРµРєС†РёРё */
 section {
   display: none;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
 }
 
 section.active {
   display: block;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-p {
+/* СЃС‚РёР»РёР·СѓРµРј СЃСЃС‹Р»РєРё РЅР° СЃРѕС†РёР°Р»СЊРЅС‹Рµ СЃРµС‚Рё */
+.social-link {
+  display: inline-block;
+  margin-right: 10px;
   font-size: 1.5rem;
-  line-height: 2rem;
-  margin-bottom: 2rem;
+  color: #666;
+  transition: color 0.2s;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-ul {
-  margin-bottom: 2rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-a {
-  color: #333;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+.social-link:hover {
+  color: #000;
 }
