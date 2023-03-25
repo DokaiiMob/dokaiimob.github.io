@@ -1,56 +1,51 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Мой сайт</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <!-- подключаем стили -->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <!-- подключаем библиотеку Font Awesome для иконок социальных сетей -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <a href="https://twitter.com/" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
-<a href="https://www.facebook.com/" class="social-link"><i class="fab fa-facebook"></i> Facebook</a>
-<a href="https://www.instagram.com/" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
-
-      </ul>
-    </nav>
+    <h1>My Website</h1>
   </header>
-
+  <nav>
+    <!-- добавляем вкладки -->
+    <div class="tab active" data-tab="home">Главная</div>
+    <div class="tab" data-tab="works">Работы</div>
+    <div class="tab" data-tab="contact">Контакты</div>
+  </nav>
   <main>
-    <section id="home" class="active">
-      <h1>Добро пожаловать на мой сайт</h1>
-      <p>Здесь вы можете найти информацию обо мне и моих работах.</p>
+    <!-- добавляем секцию для главной вкладки -->
+    <section class="active" data-tab="home">
+      <p>Добро пожаловать на мой сайт!</p>
     </section>
-
-    <section id="works">
+    <!-- добавляем секцию для вкладки работы -->
+    <section data-tab="works">
       <h2>Мои работы</h2>
-      <p>Вот некоторые примеры моих работ:</p>
+      <p>Примеры моих работ:</p>
       <ul>
-        <li><a href="#">Работа 1</a></li>
-        <li><a href="#">Работа 2</a></li>
-        <li><a href="#">Работа 3</a></li>
+        <li>Проект 1</li>
+        <li>Проект 2</li>
+        <li>Проект 3</li>
       </ul>
-      <p>А также некоторый пример текста:</p>
-      <p>«Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.»</p>
     </section>
-
-    <section id="contacts">
+    <!-- добавляем секцию для вкладки контакты -->
+    <section data-tab="contact">
       <h2>Контакты</h2>
-      <p>Вы можете связаться со мной через социальные сети:</p>
-      <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
-      </ul>
+      <p>Вы можете связаться со мной через следующие социальные сети:</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
+        <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+        <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+      </div>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2023 Мой сайт</p>
-  </footer>
-
+  <!-- подключаем скрипт для переключения вкладок -->
   <script src="script.js"></script>
 </body>
 </html>
