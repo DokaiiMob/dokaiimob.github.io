@@ -1,29 +1,35 @@
-const tabButtons = document.querySelectorAll('.tab-button');
-const tabContents = document.querySelectorAll('.tab-content');
+// получаем форму для ввода ключевых слов и кнопку поиска
+const searchForm = document.querySelector('#search-form');
+const searchInput = document.querySelector('#search-input');
+const searchButton = document.querySelector('#search-button');
 
-function changeTab(event) {
-  // Предотвращаем переход по ссылке
-  event.preventDefault();
+// получаем список всех статей блога
+const articles = document.querySelectorAll('.article');
 
-  // Скрытие всех вкладок
-  tabContents.forEach(tabContent => {
-    tabContent.style.display = 'none';
+// функция для поиска статей по ключевым словам
+function searchArticles(keyword) {
+  // проходим по всем статьям блога
+  articles.forEach(article => {
+    // получаем заголовок и текст статьи
+    const title = article.querySelector('.article-title').textContent.toLowerCase();
+    const content = article.querySelector('.article-content').textContent.toLowerCase();
+
+    // если заголовок или текст статьи содержат ключевое слово, то отображаем эту статью
+    if (title.includes(keyword) || content.includes(keyword)) {
+      article.style.display = 'block';
+    } else {
+      article.style.display = 'none';
+    }
   });
-
-  // Удаление класса active у всех кнопок
-  tabButtons.forEach(tabButton => {
-    tabButton.classList.remove('active');
-  });
-
-  // Отображение нужной вкладки
-  const tabSelected = this.getAttribute('data-tab');
-  document.querySelector(`#${tabSelected}`).style.display = 'flex';
-
-  // Добавление класса active текущей кнопке
-  this.classList.add('active');
 }
 
-// Привязка функции changeTab к клику на каждую кнопку
-tabButtons.forEach(tabButton => {
-  tabButton.addEventListener('click', changeTab);
+// обработчик события для кнопки поиска
+searchButton.addEventListener('click', (event) => {
+  event.preventDefault(); // предотвращаем отправку формы
+
+  // получаем значение ключевого слова из поля ввода
+  const keyword = searchInput.value.trim().toLowerCase();
+
+  // вызываем функцию для поиска статей по ключевому слову
+  searchArticles(keyword);
 });
