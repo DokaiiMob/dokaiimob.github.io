@@ -1,63 +1,133 @@
-.footer {
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* Основные стили */
+
+body {
   font-family: Arial, sans-serif;
-  padding: 50px 0;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-.footer h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.footer p {
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-align: center;
-}
+/* Шапка сайта */
 
-.footer a {
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
   color: #fff;
-  font-size: 24px;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #fff;
   text-decoration: none;
-  margin-right: 10px;
-  transition: color 0.3s ease-in-out;
+  font-size: 20px;
+  transition: all 0.3s ease;
 }
 
-.footer a:hover {
-  color: #00ff00;
+nav a:hover {
+  color: #f1c40f;
 }
 
-.footer .social-icons {
+/* Основное содержимое */
+
+main {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.footer .social-icons a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #00ff00;
-  margin-right: 20px;
-  transition: background-color 0.3s ease-in-out;
+article {
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.footer .social-icons a:hover {
-  background-color: #ff00ff;
+article h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
 }
 
-.footer .social-icons i {
-  font-size: 30px;
-  color: #000;
+article p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Сайдбар */
+
+aside {
+  flex-basis: calc(25% - 20px);
+  margin-left: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+aside h3 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
+
+aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+aside li {
+  margin-bottom: 10px;
+}
+
+aside a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+aside a:hover {
+  color: #f1c40f;
+}
+
+/* Футер сайта */
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
 }
