@@ -1,17 +1,16 @@
-// получаем ссылки на вкладки и секции
+// получаем все элементы вкладок и контенты
 const tabs = document.querySelectorAll('.tab');
-const sections = document.querySelectorAll('section');
+const contents = document.querySelectorAll('.tab-content');
 
-// обрабатываем клик по вкладке
-tabs.forEach(tab => {
+// добавляем обработчики событий на клик по вкладкам
+tabs.forEach((tab, index) => {
   tab.addEventListener('click', () => {
-    // удаляем класс 'active' у всех вкладок и секций
+    // удаляем класс "active" у всех вкладок и контентов
     tabs.forEach(tab => tab.classList.remove('active'));
-    sections.forEach(section => section.classList.remove('active'));
+    contents.forEach(content => content.classList.remove('active'));
 
-    // добавляем класс 'active' для текущей вкладки и соответствующей секции
+    // добавляем класс "active" только выбранной вкладке и соответствующему контенту
     tab.classList.add('active');
-    const targetSection = document.querySelector(tab.dataset.target);
-    targetSection.classList.add('active');
+    contents[index].classList.add('active');
   });
 });
