@@ -1,6 +1,6 @@
 /* Стили для шапки */
 header {
-  background-color: #333;
+  background: linear-gradient(90deg, #2c2c2c, #9b1d9b, #d82b8f);
   color: #fff;
   padding: 10px;
 }
@@ -53,6 +53,7 @@ nav a:hover:before {
 
 /* Стили для основного содержимого */
 main {
+  background-color: #f7f7f7;
   padding: 20px;
 }
 
@@ -72,7 +73,7 @@ h1:before {
   transform: translateX(-50%);
   width: 50%;
   height: 2px;
-  background-color: #333;
+  background: linear-gradient(90deg, #2c2c2c, #9b1d9b, #d82b8f);
   animation: animateLine 2s linear infinite;
 }
 
@@ -109,7 +110,7 @@ p {
 
 /* Стили для подвала */
 footer {
-  background-color: #333;
+  background: linear-gradient(90deg, #2c2c2c, #9b1d9b, #d82b8f);
   color: #fff;
   padding: 10px;
   text-align: center;
