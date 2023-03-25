@@ -16,56 +16,39 @@
     </nav>
   </header>
 
-  <main id="home">
-    <h1>Добро пожаловать на мой сайт</h1>
-    <p>Здесь вы можете найти информацию обо мне и моих работах.</p>
+  <main>
+    <section id="home" class="active">
+      <h1>Добро пожаловать на мой сайт</h1>
+      <p>Здесь вы можете найти информацию обо мне и моих работах.</p>
+    </section>
+
+    <section id="works">
+      <h2>Мои работы</h2>
+      <p>Вот некоторые примеры моих работ:</p>
+      <ul>
+        <li><a href="#">Работа 1</a></li>
+        <li><a href="#">Работа 2</a></li>
+        <li><a href="#">Работа 3</a></li>
+      </ul>
+      <p>А также некоторый пример текста:</p>
+      <p>«Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.»</p>
+    </section>
+
+    <section id="contacts">
+      <h2>Контакты</h2>
+      <p>Вы можете связаться со мной через социальные сети:</p>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </section>
   </main>
-
-  <section id="works">
-    <h2>Мои работы</h2>
-    <p>Вот некоторые примеры моих работ:</p>
-    <ul>
-      <li><a href="#">Работа 1</a></li>
-      <li><a href="#">Работа 2</a></li>
-      <li><a href="#">Работа 3</a></li>
-    </ul>
-    <p>А также некоторый пример текста:</p>
-    <p>«Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.»</p>
-  </section>
-
-  <section id="contacts">
-    <h2>Контакты</h2>
-    <p>Вы можете связаться со мной через социальные сети:</p>
-    <ul>
-      <li><a href="#">Facebook</a></li>
-      <li><a href="#">Twitter</a></li>
-      <li><a href="#">Instagram</a></li>
-    </ul>
-  </section>
 
   <footer>
     <p>&copy; 2023 Мой сайт</p>
   </footer>
 
-  <script>
-    const navLinks = document.querySelectorAll('nav ul li a');
-    const sections = document.querySelectorAll('main, section');
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-
-        // Удаляем класс "active" со всех вкладок и секций
-        navLinks.forEach(link => link.classList.remove('active'));
-        sections.forEach(section => section.classList.remove('active'));
-
-        // Добавляем класс "active" к выбранной вкладке и секции
-        const targetId = link.dataset.target;
-        const targetSection = document.getElementById(targetId);
-        link.classList.add('active');
-        targetSection.classList.add('active');
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
