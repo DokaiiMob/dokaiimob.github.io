@@ -1,0 +1,73 @@
+/* Стили для шапки */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Стили для навигации */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Стили для основного содержимого */
+main {
+  padding: 20px;
+}
+
+/* Стили для подвала */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Адаптивный дизайн */
+@media only screen and (max-width: 768px) {
+  /* Стили для навигации */
+  nav {
+    margin-bottom: 20px;
+  }
+
+  nav li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  nav a {
+    display: block;
+    padding: 10px;
+  }
+
+  /* Стили для основного содержимого */
+  main {
+    padding: 10px;
+  }
+}
