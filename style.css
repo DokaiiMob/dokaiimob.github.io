@@ -11,6 +11,7 @@ nav ul {
   margin: 0;
   padding: 0;
   text-align: center;
+  position: relative;
 }
 
 nav li {
@@ -29,11 +30,25 @@ nav a {
   font-weight: bold;
   padding: 5px 10px;
   border-radius: 5px;
+  position: relative;
+  z-index: 1;
 }
 
-nav a:hover {
+nav a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
-  color: #333;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+nav a:hover:before {
+  opacity: 0.2;
 }
 
 /* Стили для основного содержимого */
@@ -41,33 +56,61 @@ main {
   padding: 20px;
 }
 
+/* Стили для заголовка */
+h1 {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h1:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: #333;
+  animation: animateLine 2s linear infinite;
+}
+
+/* Анимация для заголовка */
+@keyframes animateLine {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Стили для текста */
+p {
+  font-size: 1.2em;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Анимация для текста */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Стили для подвала */
 footer {
   background-color: #333;
   color: #fff;
-  text-align: center;
   padding: 10px;
-}
-
-/* Адаптивный дизайн */
-@media only screen and (max-width: 768px) {
-  /* Стили для навигации */
-  nav {
-    margin-bottom: 20px;
-  }
-
-  nav li {
-    display: block;
-    margin: 10px 0;
-  }
-
-  nav a {
-    display: block;
-    padding: 10px;
-  }
-
-  /* Стили для основного содержимого */
-  main {
-    padding: 10px;
-  }
+  text-align: center;
 }
