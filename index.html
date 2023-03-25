@@ -2,50 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  <!-- подключаем стили -->
+  <title>Digital Style</title>
   <link rel="stylesheet" href="style.css">
-  <!-- подключаем библиотеку Font Awesome для иконок социальных сетей -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>My Website</h1>
-  </header>
-  <nav>
-    <!-- добавляем вкладки -->
-    <div class="tab active" data-tab="home">Главная</div>
-    <div class="tab" data-tab="works">Работы</div>
-    <div class="tab" data-tab="contact">Контакты</div>
-  </nav>
-  <main>
-    <!-- добавляем секцию для главной вкладки -->
-    <section class="active" data-tab="home">
-      <p>Добро пожаловать на мой сайт!</p>
-    </section>
-    <!-- добавляем секцию для вкладки работы -->
-    <section data-tab="works">
-      <h2>Мои работы</h2>
-      <p>Примеры моих работ:</p>
+    <nav>
       <ul>
-        <li>Проект 1</li>
-        <li>Проект 2</li>
-        <li>Проект 3</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="hero">
+      <h1>Digital Style</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices, nibh ac volutpat pharetra, ante metus bibendum magna, vel consequat lacus metus non ex.</p>
+      <a href="#">Learn More</a>
+    </section>
+    
+    <section class="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>
+          <h3>Web Design</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod risus a lacus fringilla, ac faucibus turpis gravida.</p>
+        </li>
+        <li>
+          <h3>Web Development</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod risus a lacus fringilla, ac faucibus turpis gravida.</p>
+        </li>
+        <li>
+          <h3>SEO</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod risus a lacus fringilla, ac faucibus turpis gravida.</p>
+        </li>
       </ul>
     </section>
-    <!-- добавляем секцию для вкладки контакты -->
-    <section data-tab="contact">
-      <h2>Контакты</h2>
-      <p>Вы можете связаться со мной через следующие социальные сети:</p>
-      <div class="social-links">
-        <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
-        <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
-        <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
-      </div>
+    
+    <section class="testimonials">
+      <h2>What Our Clients Say</h2>
+      <ul>
+        <li>
+          <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod risus a lacus fringilla, ac faucibus turpis gravida.
+          </blockquote>
+          <cite>- John Doe</cite>
+        </li>
+        <li>
+          <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod risus a lacus fringilla, ac faucibus turpis gravida.
+          </blockquote>
+          <cite>- Jane Doe</cite>
+        </li>
+      </ul>
     </section>
   </main>
-  <!-- подключаем скрипт для переключения вкладок -->
-  <script src="script.js"></script>
+  
+  <footer>
+    <p>&copy; 2023 Digital Style. All rights reserved.</p>
+  </footer>
 </body>
 </html>
