@@ -167,3 +167,7 @@ section.active {
 .social-link:hover {
   color: #000;
 }
+
+.social-link i {
+  margin-right: 5px;
+}
